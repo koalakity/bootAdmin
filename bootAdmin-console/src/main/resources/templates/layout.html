@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        </meta>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        </meta>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        </meta>
+        <!--  Each token will be replaced by their respective titles in the resulting page. -->
+        <title layout:title-pattern="$DECORATOR_TITLE - $CONTENT_TITLE">快鹿投资者服务中心</title>
+        <link th:replace="fragments/style" />
+        <div th:replace="fragments/js"></div>
+    </head>
+
+    <body class="hold-transition skin-blue sidebar-mini">
+        <div class="wrapper">
+            <div th:replace="fragments/header"></div>
+            <div th:replace="fragments/left_nav"></div>
+
+            <div class="content-wrapper">
+                <div layout:fragment="content"></div>
+            </div>
+
+            <div th:replace="fragments/footer"></div>
+            
+            <div th:replace="fragments/modal"></div>
+
+        </div>
+    </body>
+
+</html>

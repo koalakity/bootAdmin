@@ -1,0 +1,209 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style type="text/css">
+    body {
+        font-family: SimSun;
+        font-size: 15px;
+        line-height: 25px;
+        word-break: break-all;
+    }
+    body, p, h1, h2, h3, h4, h5, h6, ul, li {
+        padding: 0px;
+        margin: 0px;
+    }
+    ul {
+        list-style: none;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        font-weight: normal;
+    }
+    h1, h2, h3 {
+        text-align: center;
+        padding: 20px 0;
+    }
+    .pdt20 {
+        padding: 20px 0;
+    }
+    .left {
+        float: left;
+        width: 300px;
+    }
+    .explain {
+        margin: 10px 0;
+    }
+    p {
+        text-indent: 2em;
+    }
+    table p {
+        text-indent:0em;
+    }
+    .retract {
+        text-indent: 2em;
+    }
+    .ta-center {
+        text-align: center;
+    }
+    .ll2em {
+        margin-left: 2em;
+        clear: both;
+    }
+    .mt20px {
+        margin-top:20px;
+    }
+    .mt10px {
+        margin-top:10px;
+    }
+    span.placeholder {
+        width: 100px;
+        display: inline-block;
+    }
+    div.header {
+        display: block;
+        text-align: center;
+        position: running(header);
+    }
+    div.footer {
+        display: block;
+        text-align: center;
+        position: running(footer);
+    }
+    table{
+	  	table-layout:fixed;
+	}
+    div.content {
+        page-break-after: always;
+    }
+    @page {
+        @top-center {
+            content: element(header)
+        }
+    }
+    @page {
+        @bottom-center {
+            content: element(footer)
+        }
+    }
+    </style>
+
+    <title></title>
+</head>
+
+<body>
+    <p align="center">
+        <h2 align="center">
+            <strong>补充担保协议</strong>
+        </h2>
+    </p>
+    <p style='margin-left:260.0pt;text-indent:36.0pt;line-height: 10.2pt'>本协议编号：${guaCode!}</p>
+    <p>&nbsp;</p>
+    <p>接受担保方（甲方）：<span style=" text-decoration:underline">${customerName!}</span></p>
+    <p>证件类型：
+    <img src="box<#if customerCardType == "身份证">0<#else>1</#if>.png" width="20" height="20" style="vertical-align: middle;margin-top: 8px;"/>身份证
+    <img src="box<#if customerCardType == "00230002">0<#else>1</#if>.png" width="20" height="20" style="vertical-align: middle;margin-top: 8px;"/>护照
+    <img src="box<#if customerCardType == "00230003">0<#else>1</#if>.png" width="20" height="20" style="vertical-align: middle;margin-top: 8px;"/>军官证
+    <img src="box1.png" width="20" height="20" style="vertical-align: middle;margin-top: 8px;"/>营业执照
+    <img src="box<#if customerCardType == "00230007">0<#else>1</#if>.png" width="20" height="20" style="vertical-align: middle;margin-top: 8px;"/>组织机构代码
+    <#if customerCardType == "00230006">
+    	<img src="box0.png" width="20" height="20" style="vertical-align: middle;margin-top: 8px;"/>其他：<u>港澳通行证</u>
+    <#elseif customerCardType == "00230008">
+    	<img src="box0.png" width="20" height="20" style="vertical-align: middle;margin-top: 8px;"/>其他：<u>台湾居住证</u>	
+    <#else>
+    	<img src="box1.png" width="20" height="20" style="vertical-align: middle;margin-top: 8px;"/>其他：<u>&nbsp;&nbsp;&nbsp;</u>
+    </#if>
+    </p>
+    <p>证件号：<span style=" text-decoration:underline"><u>${customerCardId!}</u></span></p>
+    <p>联系方式：<span style=" text-decoration:underline"><u>${mobile!}</u></span></p>
+    <p>&nbsp;</p>
+    <p>补充担保方（乙方）：上海快鹿投资（集团）有限公司</p>
+    <p>地址：上海市长宁区虹桥路1438号32层</p>
+    <p>联系方式：021-61258079</p>
+    <p>&nbsp;</p>
+	<p><strong>基于乙方已向投资人和社会公开承诺：托底担保全部快鹿资管产品的兑付责任，并最早于2016年7月1日、最晚于2016年10月1日全面启动恢复兑付工作，全部兑付完成时间不超过原合同期满后的第十个月，乙方将尽全力、尽快地恢复启动和完成兑付工作，兑付工作将严格按照合同期满日的先后顺序公平公正地进行。</strong></p>
+	<p>在原合同的基础之上，现乙方向甲方作出以下补充担保：</p>
+	<p>第一条  乙方担保：对以下《附表一》所列示的原合同涉及的未兑付投资本金、投资收益及延期收益承担全部兑付责任。</p>
+	<p>第二条  针对原合同约定期满日后一次性兑付投资本金及投资收益的产品，乙方承诺：开始恢复兑付的日期，最晚于原合同期满日后的第七个月开始兑付，乙方分四次兑付原合同未兑付的投资本金，每月兑付一次，连续兑付四个月，每次兑付金额为原合同未兑付投资本金的25%，投资收益及延期收益在最后一次一并兑付。延期收益标准按原合同未兑付投资本金及未兑付投资收益合计金额总数的年化利率6%执行，延期收益额的计算期限，自原合同期满次日起至乙方实际兑付日止。</p>
+	<p>第三条  针对原合同约定每月兑付投资收益的产品，乙方承诺：开始恢复兑付月收益的日期，最晚不超过自中断兑付月收益的当期起算后的第六个月开始恢复兑付，并尽一切可能，争取提前。具体兑付日期，按照原合同约定的每月兑付日期逐月执行，直至原合同约定的兑付期数完成。如出现月度投资收益兑付期数还未全部完成，而最后一期投资本金兑付已执行的情况，则剩余未兑付的全部投资收益，在兑付本金时一并兑付。该产品的投资本金及延期收益的计算标准、计算期限，按照本补充担保协议第二条的约定执行。</p>
+    <p>第四条  本补充担保协议为《附表一》所列示的原合同的补充，原合同仍然具有法律效力。</p>
+    <p>第五条  甲方签署本补充担保协议时应提供《附表一》所列示的合同原件。</p>
+    <p>第六条  本补充担保协议自甲乙双方签字/盖章之日起生效。</p>
+    <p>第七条  本补充担保协议一式两份，甲乙双方各执一份，具有同等法律效力。</p>
+    <p>第八条  甲乙双方必须严格遵守本补充担保协议的约定，任何一方违反约定，违约方应承担全部违约责任。</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p align="left">附表一：</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <table border="1" cellspacing="0" cellpadding="0" width="680" align="center">
+        <tbody>
+            <tr>
+                <td valign="center" align="center" style="width:35px;">
+                    <p>序号</p>
+                </td>
+
+                <td valign="center" align="center" style="width:150px">
+                    <p>合同订单编号</p>
+                </td>
+
+                <td valign="center" align="center" >
+                    <p>客户名称</p>
+                </td>
+
+                <td valign="center" align="center" style="width:150px">
+                    <p>证件号码</p>
+                </td>
+                <td valign="center" align="center">
+                    <p>所属平台</p>
+                </td>
+                <td valign="center" align="center">
+                    <p>签署日期</p>
+                </td>
+            </tr>
+                <tr>
+                    <td valign="center" align="center">
+                        <p>1</p>
+                    </td>
+
+                    <td valign="center" align="center">
+                        <p>${orderCode!}</p>
+                    </td>
+
+                    <td valign="center" align="center">
+                        <p>${customerName!}</p>
+                    </td>
+
+                    <td valign="center" align="center">
+                        <p>${customerCardId!}</p>
+                    </td>
+                    <td valign="center" align="center" >
+                        <p>${platform!}</p>
+                    </td>
+                    <td valign="center" align="center">
+                        <p><#if createDate??>${createDate?string("yyyy年MM月dd日")}</#if></p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+    <p align="left">&nbsp;</p>
+    <p align="left">&nbsp;</p>
+    <p style="text-indent:1em;">
+        <span style=" display:inline-block; width:300px;">甲方：${customerName!}</span>
+        <span style=" display:inline-block;">乙方：上海快鹿投资（集团）有限公司</span>
+    </p>
+    <p style="text-indent:1em;">
+        <span style=" display:inline-block; width:300px;">（签字/盖章） </span>
+        <span style=" display:inline-block;">（盖章）</span>
+    </p>
+    <p style="text-indent:1em;color:white;" align="left">
+        <span style=" display:inline-block; width:300px;">客户签章处：</span>
+        <span style=" display:inline-block; margin-left:25px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;快鹿签章处：</span>
+    </p>
+    <p style="text-indent:1em;">
+        <span style=" display:inline-block; width:300px;">签署日期：<#if createDate??><u><span>${createDate?string("yyyy")}</span></u>年<u><span>${createDate?string("MM")}</span></u>月<u><span>${createDate?string("dd")}</span></u>日</#if></span>
+        <span style=" display:inline-block;">签署日期：<#if createDate??><u><span>${createDate?string("yyyy")}</span></u>年<u><span>${createDate?string("MM")}</span></u>月<u><span>${createDate?string("dd")}</span></u>日</#if></span>
+    </p>
+    <p style="color:red">甲方确认：点击本界面的“我已阅读并同意签署该协议”按钮后，本电子补充担保协议立即生效；本电子补充担保协议届时即具有相应法律效力。</p>
+</body>
+</html>
