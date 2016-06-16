@@ -10,7 +10,6 @@ import org.springframework.http.HttpStatus;
 
 import com.snowstore.log.configure.LogStashConfigure;
 import com.snowstore.mercury.configuration.EnableHealth;
-import com.snowstore.terra.client.TerraPropertyPlaceholderConfigurer;
 
 
 @Configuration
@@ -21,10 +20,10 @@ public class WebConfig {
 	/**配置中心
 	 * @return
 	 */
-	@Bean
+	/*@Bean
 	public TerraPropertyPlaceholderConfigurer terraPropertyPlaceholderConfigurer() {
 		return new TerraPropertyPlaceholderConfigurer();
-	}
+	}*/
 	
 	@Bean
 	public EmbeddedServletContainerCustomizer containerCustomizer() {
