@@ -1,4 +1,5 @@
-# bootAdmin
+[![Build Status](https://travis-ci.org/koalakity/bootAdmin.svg?branch=master)](https://travis-ci.org/koalakity/bootAdmin)
+## bootAdmin
 spring boot+adminlte种子项目,可用作企业管理应用系统初始模板。
 
 ## 技术栈
