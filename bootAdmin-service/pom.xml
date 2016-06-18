@@ -16,10 +16,6 @@
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-redis</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-mongodb</artifactId>
 			<scope>provided</scope>
 		</dependency>
@@ -31,11 +27,6 @@
 			<groupId>com.google.zxing</groupId>
 			<artifactId>core</artifactId>
 			<version>3.2.1</version>
-		</dependency>
-		<dependency>
-			<groupId>com.zendaimoney.hera</groupId>
-			<artifactId>hera-connector</artifactId>
-			<version>1.1.1-SNAPSHOT</version>
 		</dependency>
 		<!-- google java library -->
 		<dependency>
@@ -74,21 +65,6 @@
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-lang3</artifactId>
 			<version>${commons-lang3.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>com.snowstore.log</groupId>
-			<artifactId>LogObserver-client</artifactId>
-			<version>1.0.0</version>
-			<exclusions>
-				<exclusion>
-					<groupId>com.zendaimoney.uc</groupId>
-					<artifactId>uc-client</artifactId>
-				</exclusion>
-				<exclusion>
-					<groupId>com.zendaimoney.hera</groupId>
-					<artifactId>hera-connector</artifactId>
-				</exclusion>
-			</exclusions>
 		</dependency>
 		<!-- pdf -->
 		<dependency>

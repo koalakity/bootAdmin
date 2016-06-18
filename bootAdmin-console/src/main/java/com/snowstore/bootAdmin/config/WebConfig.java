@@ -5,16 +5,10 @@ import org.springframework.boot.context.embedded.EmbeddedServletContainerCustomi
 import org.springframework.boot.context.embedded.ErrorPage;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Import;
 import org.springframework.http.HttpStatus;
-
-import com.snowstore.log.configure.LogStashConfigure;
-import com.snowstore.mercury.configuration.EnableHealth;
 
 
 @Configuration
-@Import(LogStashConfigure.class)
-@EnableHealth
 public class WebConfig {
 	
 	/**配置中心

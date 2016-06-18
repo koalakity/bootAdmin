@@ -123,19 +123,6 @@
 			</exclusions>
 		</dependency>
 
-		<!-- httpclient end -->
-		<dependency>
-			<groupId>com.snowstore.poseidon</groupId>
-			<artifactId>poseidon-client</artifactId>
-			<version>1.3.4</version>
-		</dependency>
-
-		<!-- database -->
-		<dependency>
-			<groupId>ojdbc</groupId>
-			<artifactId>ojdbc</artifactId>
-			<version>7</version>
-		</dependency>
 
 		<!-- test -->
 		<dependency>
@@ -150,16 +137,7 @@
 			<version>${assertj.version}</version>
 			<scope>test</scope>
 		</dependency>
-		<dependency>
-			<groupId>com.zendaimoney.hera</groupId>
-			<artifactId>hera-common</artifactId>
-			<version>1.1.1-SNAPSHOT </version>
-		</dependency>
-		<dependency>
-			<groupId>com.zendaimoney.hera</groupId>
-			<artifactId>hera-connector</artifactId>
-			<version>1.1.1-SNAPSHOT </version>
-		</dependency>
+		
 
 		<dependency>
 			<groupId>commons-beanutils</groupId>
@@ -176,18 +154,6 @@
 			<artifactId>spring-boot-starter-data-mongodb</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>com.snowstore.log</groupId>
-			<artifactId>LogObserver-client</artifactId>
-			<version>1.0.0</version>
-			<exclusions>
-				<exclusion>
-					<groupId>*</groupId>
-					<artifactId>*</artifactId>
-				</exclusion>
-
-			</exclusions>
-		</dependency>
-		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
 			<exclusions>
@@ -201,22 +167,6 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-thymeleaf</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>com.snowstore.terra</groupId>
-			<artifactId>terra-client</artifactId>
-			<version>1.0.0</version>
-		</dependency>
-		<dependency>
-			<groupId>com.snowstore.mercury</groupId>
-			<artifactId>mercury-boot</artifactId>
-			<version>1.0.0-SNAPSHOT</version>
-		</dependency>
-		<dependency>
-		    <groupId>org.log4mongo</groupId>
-		    <artifactId>log4mongo-java</artifactId>
-		    <version>0.7.4</version>
 		</dependency>
 	</dependencies>
 	<build>
