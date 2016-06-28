@@ -10,5 +10,13 @@ bootstart   ui框架
 datatables  后台js框架
 
 ## 使用说明
+git clone https://github.com/koalakity/bootAdmin.git
+cd bootAdmin
+mvn archetype:create-from-project -Darchetype.filteredExtensions=java
+cd target/generated-sources/archetype/
+mvn install
+mvn archetype:generate -DarchetypeCatalog=local
+根据提示选择 archetype 填写groupId artifactId 生成项目骨架 项目名称即所填写的 artifactid 包含3个module  domain，service，console
+数据库使用内存数据库，eclipse 导入生成的maven项目后可直接运行
 
 ## 在线演示
