@@ -28,7 +28,7 @@ mvn install
 ```bash
 mvn archetype:generate -DarchetypeCatalog=local
 ```
-根据提示选择 archetype 填写groupId artifactId 生成项目骨架 项目名称即所填写的 artifactid 包含3个module  domain，service，console
-数据库使用内存数据库，eclipse 导入生成的maven项目后可直接运行
+根据提示选择 archetype 填写groupId artifactId 生成项目骨架 项目名称即所填写的 artifactid 包含3个module  domain，service，console，eclipse导入生成的maven项目后可直接运行console模块下的Main.java
+启动成功后浏览器访问 <a href="http://127.0.0.1:8800">http://127.0.0.1:8800</a>
 
 ## 在线演示
