@@ -26,7 +26,7 @@ mvn install
 ```
 4.使用安装好的项目骨架创建 项目
 ```bash
-mvn archetype:generate -DarchetypeCatalog=local<br/>
+mvn archetype:generate -DarchetypeCatalog=local
 ```
 根据提示选择 archetype 填写groupId artifactId 生成项目骨架 项目名称即所填写的 artifactid 包含3个module  domain，service，console
 数据库使用内存数据库，eclipse 导入生成的maven项目后可直接运行
