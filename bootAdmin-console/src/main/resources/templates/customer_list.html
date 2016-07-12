@@ -133,14 +133,6 @@ function search(){
 	return drawTable($("form").serializeJson());
 }
   $(function () {
-	  $.fn.dataTable.ext.search.push(
-			    function( settings, data, dataIndex ) {
-			        console.info(settings);
-			        console.info(data);
-			        console.info(dataIndex);
-			        return false;
-			    }
-				);
 	  $('.customer').addClass('active');
 	  var table = search();
 	  var datePicker = initDatePicker($('#datepicker'));
