@@ -19,16 +19,6 @@
 								<div class="row">
 									<div class="col-xs-2">
 										<div class="form-group">
-											<label>实名认证</label> <select name="workFlow" id="workFlow" class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" aria-hidden="true">
-												<option selected="selected">全部</option>
-												<option>注册</option>
-												<option>认证失败</option>
-												<option>认证通过</option>
-											</select>
-										</div>
-									</div>
-									<div class="col-xs-2">
-										<div class="form-group">
 											<label>会员状态</label> <select name="status" id="status" class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" aria-hidden="true">
 												<option selected="selected">全部</option>
 												<option>有效</option>
@@ -40,7 +30,7 @@
 										<div class="form-group">
 											<label>搜索条件</label>
 											<div class="input-group">
-												<input type="text" placeholder="姓名,身份证,手机号" name="query" id="qeury" class="form-control" data-inputmask="'mask': ['999-999-9999 [x99999]', '+099 99 99 9999[9]-9999']" data-mask="" />
+												<input type="text" placeholder="姓名,身份证,手机号" name="query" id="query" class="form-control" data-inputmask="'mask': ['999-999-9999 [x99999]', '+099 99 99 9999[9]-9999']" data-mask="" />
 												<div class="input-group-addon">
 													<i class="fa fa-search"></i>
 												</div>
@@ -48,10 +38,10 @@
 											<!-- /.input group -->
 										</div>
 									</div>
-								</div>
-								<div class="row">
+									
 									<div class="col-xs-2">
 										<div class="form-group">
+											<label>&nbsp;</label>
 											<div class="input-group date">
 												<div class="input-group-addon">
 													<i class="fa fa-calendar"></i>
@@ -61,13 +51,11 @@
 											<!-- /.input group -->
 										</div>
 									</div>
-									<div class="col-xs-2">
-										<div class="form-group">
-											<button type="button" onclick="search()" class="btn btn-primary">
-												<i class="fa fa-search"> 搜索</i>
-											</button>
-										</div>
-									</div>
+									
+									
+								</div>
+								<div class="row">
+									
 								</div>
 							</form>
 						</div>
@@ -107,12 +95,13 @@
 		<script>
 function drawTable(queryData){
 	console.info(queryData);
-	$('#example2').DataTable({
-		  serverSide: true,
+	return $('#example2').DataTable({
+		  "sDom": '"top"i',
+		  "serverSide": true,
 		  "paging": true,
 		  "destroy": true,
 	      "lengthChange": false,
-	      "searching": false,
+	      "searching": true,
 	      "ordering": false,
 	      "info": true,
 	      "autoWidth": false,
@@ -141,12 +130,35 @@ function drawTable(queryData){
 		});
 }
 function search(){
-	drawTable($("form").serializeJson());
+	return drawTable($("form").serializeJson());
 }
   $(function () {
+	  $.fn.dataTable.ext.search.push(
+			    function( settings, data, dataIndex ) {
+			        console.info(settings);
+			        console.info(data);
+			        console.info(dataIndex);
+			        return false;
+			    }
+				);
 	  $('.customer').addClass('active');
-	  search();
-	  initDatePicker($('#datepicker'));
+	  var table = search();
+	  var datePicker = initDatePicker($('#datepicker'));
+	  $('#query').on('keyup change',function(){
+		  table
+          .column(1)
+          .search(this.value)
+          .draw();
+	  });
+	  $('#status').on('change',function(){
+		  table
+          .column(6)
+          .search(this.value)
+          .draw();
+	  });
+	  $('#datepicker').on('change',function(){
+		  table.draw();
+	  })
   }); 
   /**回车提交**/
   function submitForm(event) {

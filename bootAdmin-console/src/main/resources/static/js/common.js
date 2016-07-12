@@ -62,7 +62,7 @@ function load(api) {
 }
 
 function initDatePicker(obj){
-	obj.daterangepicker({
+	return obj.daterangepicker({
 		format: "YYYY-MM-DD",
 		separator: " ~ ",
 	    locale: {
