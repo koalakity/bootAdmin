@@ -17,8 +17,8 @@
 		<module>bootAdmin-console</module>
   </modules>
 
-	<name>pontus</name>
-	<description>pontus</description>
+	<name>bootAdmin</name>
+	<description>bootAdmin</description>
 	
 	<repositories>
 		<repository>
